@@ -51,6 +51,12 @@ struct ipv6_devconf {
 	__s32		force_tllao;
 	__s32           ndisc_notify;
 	__s32		suppress_frag_ndisc;
+#ifdef CONFIG_IPV6_RPL
+	__s32		rpl_enabled;
+	__s32		rpl_joined;
+	__s32		rpl_dodag_root;
+	__s32		rpl_icmp_dump;
+#endif /* CONFIG_IPV6_RPL */
 	void		*sysctl;
 };
 
